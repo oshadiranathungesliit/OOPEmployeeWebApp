@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Querys>
+
+	<!-- Create table supplier Query -->
+	<query id="create_supplier_table">
+        <![CDATA[
+            CREATE TABLE supplier(
+				supplierID varchar(10) not null,
+				supplierName varchar(20),
+				designation varchar(15),
+				StockName varchar(15),
+				department varchar(15),
+				address  varchar(50),
+				StockKeeper varchar(20),
+				Origin varchar(10) DEFAULT 'Local',
+				primary key (supplierID)
+			)
+        ]]>
+	</query>
+
+	<!-- DROP TABLE SUPPLIER Query -->
+	<query id="drop_table">
+         <![CDATA[        
+            DROP TABLE IF EXISTS supplier 
+        ]]>
+	</query>
+
+	<!-- Select all supplier orders Query -->
+	<query id="insert_supplier">
+        <![CDATA[
+          	insert into supplier (supplierID, supplierName, designation, StockName, department, address, StockKeeper, Origin) 
+          	values (?, ?, ?, ?, ?, ?, ?, ?)
+        ]]>
+	</query>
+
+	<!-- Select a particular supplier by id Query -->
+	<query id="supplier_by_id">
+         <![CDATA[        
+            select * from supplier where supplier.supplierID = ?
+        ]]>
+	</query>
+
+	<!-- Select all supplier -->
+	<query id="all_supplier">
+         <![CDATA[        
+            select * from supplier
+        ]]>
+	</query>
+
+	<!-- Delete a particular supplier by id Query -->
+	<query id="remove_supplier">
+         <![CDATA[        
+            delete from supplier where supplier.supplierID = ?
+        ]]>
+	</query>
+	
+	<!-- Update a particular supplier by id Query -->
+	<query id="update_supplier">
+         <![CDATA[        
+            update supplier as e 
+            set e.supplierName = ?, e.StockName = ?, e.faculty = ?, e.department = ?, e.address = ?, e.StockKeeper = ?, e.Origin = ? 
+            where e.employeeID = ?
+        ]]>
+	</query>
+	
+		<!-- Get supplier IDs Query -->
+	<query id="supplier_ids">
+         <![CDATA[        
+            select e.supplierID from supplier as e
+        ]]>
+	</query>
+
+</Querys>

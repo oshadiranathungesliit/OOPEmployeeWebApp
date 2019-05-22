@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd" id="WebApp_ID" version="3.0">
+  <display-name>OOP Supplier Web App</display-name>
+ 
+  <servlet>
+    <servlet-name>AddSupplierServlet</servlet-name>
+    <servlet-class>com.oop.servlet.AddSupplierServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>UpdateSupplierServlet</servlet-name>
+    <servlet-class>com.oop.servlet.UpdateSupplierServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>DeleteSupplierServlet</servlet-name>
+    <servlet-class>com.oop.servlet.DeleteSupplierServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>GetSupplierServlet</servlet-name>
+    <servlet-class>com.oop.servlet.GetSupplierServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>ListSupplierServlet</servlet-name>
+    <servlet-class>com.oop.servlet.ListSupplierServlet</servlet-class>
+  </servlet>
+ 
+  <servlet-mapping>
+    <servlet-name>AddSupplierServlet</servlet-name>
+    <url-pattern>/AddSupplierServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>UpdateSupplierServlet</servlet-name>
+    <url-pattern>/UpdateSupplierServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>DeleteSupplierServlet</servlet-name>
+    <url-pattern>/DeleteSupplierServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>GetSupplierServlet</servlet-name>
+    <url-pattern>/GetSupplierServlet</url-pattern>
+  </servlet-mapping>
+   <servlet-mapping>
+    <servlet-name>ListSupplierServlet</servlet-name>
+    <url-pattern>/ListSupplierServlet</url-pattern>
+  </servlet-mapping>
+ 
+ 
+  <welcome-file-list>
+    <welcome-file>homeView.html</welcome-file>
+    <welcome-file>homeView.htm</welcome-file>
+    <welcome-file>homeView.jsp</welcome-file>
+    <welcome-file>index.html</welcome-file>
+    <welcome-file>index.htm</welcome-file>
+    <welcome-file>index.jsp</welcome-file>
+  </welcome-file-list>
+
+</web-app>
