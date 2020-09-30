@@ -20,6 +20,8 @@ public class Supplier {
 	
 	private String Origin;
 
+	private String JobRole;
+
 	/**
 	 * @return the SupplierID
 	 */
